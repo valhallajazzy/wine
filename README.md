@@ -25,7 +25,7 @@ $ poetry shell
 и обозначить в нем переменную виртульного окружения (DRINKS_PATH) содержащую путь основного(конфигурационного) 
 файла с данными для сайта:
 
-![Screenshot](https://github.com/valhallajazzy/wine/blob/main/screenshots/env.png)
+![Screenshot](https://github.com/valhallajazzy/wine/blob/main/screenshots/env.png width="300" height="300")
 ![Screenshot](https://github.com/valhallajazzy/wine/blob/main/screenshots/vatiable.png)
 
 - Запустите сайт из корневой директроии командой:
