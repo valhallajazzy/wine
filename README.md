@@ -22,11 +22,11 @@ $ poetry shell
 ## Запуск
 
 Для запуска в скрипта потребуется создать в корневой директории проекта файл .env  
-и обозначить в нем переменную виртульного окружения (DRINKS_PATH) содержащую путь основного(конфигурационного)  
+и обозначить в нем переменную виртульного окружения (DRINKS_PATH) содержащую путь основного(конфигурационного) 
 файла с данными для сайта:
 
-![Screenshot]()
-![Screenshot]()
+![Screenshot](https://github.com/valhallajazzy/wine/blob/main/screenshots/env.png)
+![Screenshot](https://github.com/valhallajazzy/wine/blob/main/screenshots/vatiable.png)
 
 - Запустите сайт из корневой директроии командой:
 
@@ -52,7 +52,7 @@ $ python3 main.py --path 'ваш путь к файлу'
 Если вы хотите изменить конфигурационный файл запуска, то следует указать новый путь  
 в переменной DRINKS_PATH в файле .env
 
-![Screenshot]()
+![Screenshot](https://github.com/valhallajazzy/wine/blob/main/screenshots/vatiable.png)
 
 ## Цели проекта
 
