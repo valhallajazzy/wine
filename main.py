@@ -12,7 +12,7 @@ def get_company_age():
     delta = datetime.date.today() - date_of_foundation
     return int(delta.total_seconds()//86400//365)
 
-def choosing_the_word_by_age(age):
+def choose_the_word_by_age(age):
     if age % 100 > 4 and age % 100 < 21:
         return f'{age} лет'
     remains = age % 100 % 10
