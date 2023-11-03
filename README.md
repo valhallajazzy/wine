@@ -59,7 +59,7 @@ $ python3 main.py --path 'ваш путь к файлу'
 Если вы хотите изменить конфигурационный файл запуска, то следует указать новый путь  
 в переменной DRINKS_PATH в файле .env
 
-![Screenshot](https://github.com/valhallajazzy/wine/blob/main/screenshots/vatiable.png)
+![Screenshot](https://github.com/valhallajazzy/wine/blob/main/screenshots/variable.png)
 
 ## Цели проекта
 
