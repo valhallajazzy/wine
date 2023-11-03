@@ -59,7 +59,7 @@ def main():
 
     rendered_page = template.render(
         date_of_foundation=choose_the_word_by_age(age),
-        data_drink=sort_drinks(data_drink)
+        data_drinks=sort_drinks(data_drink)
     )
 
     with open('index.html', 'w', encoding="utf8") as file:
