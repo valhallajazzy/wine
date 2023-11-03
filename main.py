@@ -7,10 +7,12 @@ import pandas
 from dotenv import load_dotenv
 from collections import defaultdict
 
+
 def get_company_age():
     date_of_foundation = datetime.date(year=1920, month=1, day=1)
     delta = datetime.date.today() - date_of_foundation
     return int(delta.total_seconds()//86400//365)
+
 
 def choose_the_word_by_age(age):
     if age % 100 > 4 and age % 100 < 21:
@@ -31,11 +33,12 @@ def create_file_path():
     return parser
 
 
-def sort_drinks(drink_list):
-    drink_category_dict = defaultdict(list)
-    for elem in drink_list:
-        drink_category_dict[elem['Категория']].append(elem)
-    return drink_category_dict
+def sort_drinks(drinks):
+    drink_category = defaultdict(list)
+    for elem in drinks:
+        drink_category[elem['Категория']].append(elem)
+    return drink_category
+
 
 def main():
     env = Environment(
@@ -50,13 +53,13 @@ def main():
     excel_data_df2 = pandas.read_excel(f'{path_to_drinkdata.path}', sheet_name='Лист1', usecols=[
         'Категория','Название','Сорт','Цена','Картинка','Акция'], na_values='nan', keep_default_na=False)
 
-    list_data_drink = excel_data_df2.to_dict(orient='records')
+    data_drink = excel_data_df2.to_dict(orient='records')
 
     age = get_company_age()
 
     rendered_page = template.render(
-        date_of_foundation=choosing_the_word_by_age(age),
-        list_data_drink=sort_drinks(list_data_drink)
+        date_of_foundation=choose_the_word_by_age(age),
+        data_drink=sort_drinks(data_drink)
     )
 
     with open('index.html', 'w', encoding="utf8") as file:
@@ -64,6 +67,7 @@ def main():
 
     server = HTTPServer(('0.0.0.0', 8000), SimpleHTTPRequestHandler)
     server.serve_forever()
+
 
 if __name__ == '__main__':
     main()
