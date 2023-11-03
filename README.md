@@ -33,7 +33,7 @@ $ poetry shell
 файла с данными для сайта:
 
 ![Screenshot](https://github.com/valhallajazzy/wine/blob/main/screenshots/env.png)
-![Screenshot](https://github.com/valhallajazzy/wine/blob/main/screenshots/vatiable.png)
+![Screenshot](https://github.com/valhallajazzy/wine/blob/main/screenshots/variable.png)
 
 - Запустите сайт из корневой директроии командой:
 
